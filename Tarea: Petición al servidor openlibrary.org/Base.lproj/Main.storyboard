@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tarea__Peticio_n_al_servidor_openlibrary_org" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +18,66 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="978-84-376-0494-7" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Sy-VW-wYW">
+                                <rect key="frame" x="220" y="68" width="160" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="webSearch" returnKeyType="search"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISBN:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBw-xg-knu">
+                                <rect key="frame" x="169" y="71" width="43" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dg8-7G-pOA">
+                                <rect key="frame" x="388" y="67" width="36" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="btnClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zUQ-IC-dHN"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ki1-Pk-Wge">
+                                <rect key="frame" x="149" y="117" width="302" height="420"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="302" id="gFE-AJ-3at"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dg8-7G-pOA" firstAttribute="leading" secondItem="4Sy-VW-wYW" secondAttribute="trailing" constant="8" id="0iR-3Y-lz6"/>
+                            <constraint firstItem="Dg8-7G-pOA" firstAttribute="centerY" secondItem="NBw-xg-knu" secondAttribute="centerY" id="8K0-nc-h10"/>
+                            <constraint firstItem="4Sy-VW-wYW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9AV-T6-80m"/>
+                            <constraint firstItem="NBw-xg-knu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-109.75" id="ERU-mD-rrW"/>
+                            <constraint firstItem="NBw-xg-knu" firstAttribute="baseline" secondItem="4Sy-VW-wYW" secondAttribute="baseline" id="Gqy-2a-tJ0"/>
+                            <constraint firstItem="ki1-Pk-Wge" firstAttribute="top" secondItem="4Sy-VW-wYW" secondAttribute="bottom" constant="19" id="HRC-gh-zpq"/>
+                            <constraint firstItem="Dg8-7G-pOA" firstAttribute="baseline" secondItem="4Sy-VW-wYW" secondAttribute="baseline" id="SHe-KL-QMG"/>
+                            <constraint firstItem="Dg8-7G-pOA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="Unh-iV-KkV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ki1-Pk-Wge" secondAttribute="bottom" constant="63" id="VRp-fL-Tfc"/>
+                            <constraint firstItem="Dg8-7G-pOA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="105.75" id="W8p-1U-9V9"/>
+                            <constraint firstItem="4Sy-VW-wYW" firstAttribute="baseline" secondItem="Dg8-7G-pOA" secondAttribute="firstBaseline" id="X6a-7g-vkd"/>
+                            <constraint firstItem="4Sy-VW-wYW" firstAttribute="leading" secondItem="NBw-xg-knu" secondAttribute="trailing" constant="8" id="a4R-7I-gp4"/>
+                            <constraint firstItem="ki1-Pk-Wge" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cvO-eJ-TAO"/>
+                            <constraint firstItem="ki1-Pk-Wge" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qMZ-ZX-uPh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="txtfISBN" destination="4Sy-VW-wYW" id="3fY-7U-Bdw"/>
+                        <outlet property="txtvResult" destination="ki1-Pk-Wge" id="beY-yF-MEm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="340" y="170"/>
         </scene>
     </scenes>
 </document>
