@@ -15,7 +15,7 @@ class Book {
     var imageUrl: String?
     var images: UIImage?
     
-    init(title: String, authors: String, isbn: String, imageUrl: String) {
+    init(title: String, authors: String, isbn: String, imageUrl: String?) {
         self.title = title
         self.authors = authors
         self.isbn = isbn

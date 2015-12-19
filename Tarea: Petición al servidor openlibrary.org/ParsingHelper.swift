@@ -41,7 +41,7 @@ class ParsingHelper: NSObject {
                 
                 let image: String? = dictionary2.valueForKey("cover")?.valueForKey("medium") as? String
                 dispatch_async(dispatch_get_main_queue(),{
-                    let book = Book(title: title, authors: author, isbn: isbnBook, imageUrl: image!)
+                    let book = Book(title: title, authors: author, isbn: isbnBook, imageUrl: image)
                     self.delegate!.parsingHelper(book)
                 });
                 
